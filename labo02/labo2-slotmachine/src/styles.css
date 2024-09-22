@@ -1,0 +1,85 @@
+.slotMachineContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.slotMachineSubContainer {
+    flex-direction: row;
+    display: flex;
+}
+
+.slot_Osmt {
+    border: 2px solid #000;
+    border-radius: 10px;
+    height: 80px;
+    margin: 15px;
+    padding: 10px;
+    width: 80px;
+}
+
+.slot_Osmt:hover {
+    -webkit-animation: rotate-in-center 1s cubic-bezier(.25, .46, .45, .94) both;
+    animation: rotate-in-center 1s cubic-bezier(.25, .46, .45, .94) both
+}
+
+.linearWipe {
+    -webkit-text-fill-color: transparent;
+    animation: 10s ease-in-out infinite a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase
+}
+
+.linearWipe {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 35px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@-webkit-keyframes rotate-in-center {
+    0% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        opacity: 1
+    }
+}
+
+@keyframes rotate-in-center {
+    0% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        opacity: 1
+    }
+}
