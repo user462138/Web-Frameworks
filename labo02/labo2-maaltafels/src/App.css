@@ -1,4 +1,0 @@
-table td, table th {
-    border: var(--ifm-table-border-width) solid var(--ifm-table-border-color);
-    padding: var(--ifm-table-cell-padding);
-}
