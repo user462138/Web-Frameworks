@@ -1,12 +1,11 @@
 import { useState } from "react";
-import TodoInput from "./todoInput";
+import TodoInput from "./TodoInput";
 import {TodoItemProps} from "../types"
 import TodoItem from "./TodoItem";
 
 
 const TodoList = () => {
     const [todos, setTodos] = useState<TodoItemProps[]>([]);
-    const [todo, setTodo] = useState("");
 
     const addTodo = (todo: string) => {
         setTodos([...todos, {
@@ -14,7 +13,6 @@ const TodoList = () => {
             completed: false,
             markCompleted: () => { }
         }]);
-        setTodo("");
     };
 
     const markCompleted = (index: number, _completed: boolean) => {
@@ -22,7 +20,8 @@ const TodoList = () => {
     };
     return (
         <div>
-            <TodoInput todo={todo} addTodo={(todo) => addTodo(todo)} setTodo={(todo) => setTodo(todo)}></TodoInput>
+            <TodoInput addTodo={(todo) => addTodo(todo)}></TodoInput>
+            <TodoInput addTodo={(todo) => addTodo(todo)}></TodoInput>
             <div>
                 {todos.map((todo, index) => (
                     <TodoItem key={index} name={todo.name} completed={todo.completed} markCompleted={() => markCompleted(index, todo.completed)} ></TodoItem>
