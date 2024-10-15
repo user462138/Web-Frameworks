@@ -4,18 +4,30 @@ export interface QuizResonseProps {
 }
 
 export interface QuizProps {
-    category:string
-    type:Type
-    difficulty:Difficulty
-    question:string
-    correct_answer:string
-    incorrect_answers:string[]
+    category: string
+    type: Type
+    difficulty: Difficulty
+    question: string
+    correct_answer: string
+    incorrect_answers: string[]
     user_answer?: string;
 }
 
 export interface QuizQuestionProps {
-    quiz:QuizProps
-    setUserAnswer: (answer:string) => void
+    quiz: QuizProps
+    setUserAnswer: (answer: string) => void
+    userAnswer: string
+}
+
+export interface MultipleChoiceQuestionProps {
+    quiz: QuizProps
+    setUserAnswer: (answer: string) => void
+    userAnswer: string
+}
+
+export interface TrueFalseQuestionProps {
+    quiz: QuizProps
+    setUserAnswer: (answer: string) => void
     userAnswer: string
 }
 
