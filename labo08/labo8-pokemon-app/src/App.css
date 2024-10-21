@@ -1,0 +1,126 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.browser {
+  background: #ddd;
+  color: #242424;
+  border-radius: .25em;
+  box-shadow: 0 .25em .9em -.1em rgba(0,0,0,.3);
+  display: inline-block;
+  font-size: 18px;
+  overflow: hidden;
+  padding: 2.1em 0 0;
+  position: relative
+}
+
+.browser i,.urlbar {
+  background-color: #eee;
+  display: inline-block
+}
+
+.browser .browser-navigation-bar {
+  background: linear-gradient(180deg,#edeaed 0,#dddfdd);
+  border-bottom: 2px solid #cbcbcb;
+  box-sizing: border-box;
+  display: block;
+  height: 2.1em;
+  padding: .3em;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.browser i {
+  border-radius: .45em;
+  height: .7em;
+  margin: .4em .15em;
+  width: .7em
+}
+
+.browser i:first-child {
+  background-color: #ff564f
+}
+
+.browser i:first-child:hover {
+  background-color: #ff1419
+}
+
+.browser i:nth-child(2) {
+  background-color: #ffb72a
+}
+
+.browser i:nth-child(2):hover {
+  background-color: #e6af2a
+}
+
+.browser i:nth-child(3) {
+  background-color: #25c63a
+}
+
+.browser i:nth-child(3):hover {
+  background-color: #0ae10a
+}
+
+.urlbar {
+  border: .1em solid #e1e1e1;
+  border-radius: .25em;
+  color: #aaa;
+  font-size: .75em;
+  height: 1.6em;
+  margin: .1em;
+  padding: 0 .4em;
+  vertical-align: top;
+  width: calc(100% - 6em)
+}
+
+.browser-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: scroll;
+  text-align: center;
+  width: 50vw
+}
